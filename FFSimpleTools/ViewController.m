@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "ViewControllerCell.h"
 
-@interface ViewController ()
+@interface ViewController () <UITableViewDelegate, UITableViewDataSource>
+@property (nonatomic, nullable, strong) UITableView *tableView;
+@property (nonatomic, nullable, strong) NSArray *dataSource;
 
 @end
 
@@ -16,14 +19,49 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [self.view addSubview:self.tableView];
+    
+}
+#pragma mark - UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataSource.count;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    ViewControllerCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ViewControllerCell" forIndexPath:indexPath];
+    
+    cell.contentLabel.text = self.dataSource[indexPath.row];
+    
+    return cell;
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
 }
 
+#pragma mark - set & get
+- (UITableView *)tableView {
+    if (_tableView == nil) {
+        _tableView = [[UITableView alloc]init];
+        _tableView.frame = self.view.bounds;
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        [_tableView registerNib:[UINib nibWithNibName:@"ViewControllerCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"ViewControllerCell"];
+        _tableView.rowHeight =  UITableViewAutomaticDimension;
+        _tableView.estimatedRowHeight = 200; 
+    }
+    return _tableView;
+}
 
+- (NSArray *)dataSource {
+    if (_dataSource == nil) {
+        _dataSource = @[
+                        @"钥匙串的访问",
+                        @"钥匙串的访问",
+                        @"钥匙串的访问",
+                        @"钥匙串的访问",
+                        @"钥匙串的访问",
+                        ];
+    }
+    return _dataSource;
+}
 @end

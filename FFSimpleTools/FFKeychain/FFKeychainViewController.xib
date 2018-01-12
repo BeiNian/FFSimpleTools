@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FFKeychainViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5L-FC-tSc">
+                    <rect key="frame" x="112.5" y="70" width="150" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="Fk1-9n-9pX"/>
+                        <constraint firstAttribute="width" constant="150" id="lNR-ao-nRz"/>
+                    </constraints>
+                    <state key="normal" title="添加新钥匙串"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tx5-IR-TAw">
+                    <rect key="frame" x="112.5" y="155" width="150" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="HWs-6D-sEg"/>
+                        <constraint firstAttribute="width" constant="150" id="gId-ED-1T5"/>
+                    </constraints>
+                    <state key="normal" title="更新钥匙串"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ddp-AJ-APj">
+                    <rect key="frame" x="112.5" y="240" width="150" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="Pqz-t7-Vsu"/>
+                        <constraint firstAttribute="width" constant="150" id="dgh-kp-1vy"/>
+                    </constraints>
+                    <state key="normal" title="更新钥匙串"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0b-dl-wiT">
+                    <rect key="frame" x="112" y="325" width="150" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="8G9-bV-p0j"/>
+                        <constraint firstAttribute="height" constant="45" id="fdi-bS-VLZ"/>
+                    </constraints>
+                    <state key="normal" title="更新钥匙串"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="M5L-FC-tSc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3Be-0L-F8t"/>
+                <constraint firstItem="Ddp-AJ-APj" firstAttribute="top" secondItem="Tx5-IR-TAw" secondAttribute="bottom" constant="40" id="70i-hb-BIc"/>
+                <constraint firstItem="M5L-FC-tSc" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="50" id="Gbh-25-DIl"/>
+                <constraint firstItem="t0b-dl-wiT" firstAttribute="top" secondItem="Ddp-AJ-APj" secondAttribute="bottom" constant="40" id="Hpa-OI-8sd"/>
+                <constraint firstItem="Tx5-IR-TAw" firstAttribute="leading" secondItem="M5L-FC-tSc" secondAttribute="leading" id="IGJ-zr-igV"/>
+                <constraint firstItem="Tx5-IR-TAw" firstAttribute="top" secondItem="M5L-FC-tSc" secondAttribute="bottom" constant="40" id="Qrh-N9-oeR"/>
+                <constraint firstItem="Tx5-IR-TAw" firstAttribute="width" secondItem="M5L-FC-tSc" secondAttribute="width" id="W6S-QH-Jn9"/>
+                <constraint firstItem="t0b-dl-wiT" firstAttribute="leading" secondItem="Ddp-AJ-APj" secondAttribute="leading" id="aVA-dE-lfh"/>
+                <constraint firstItem="Tx5-IR-TAw" firstAttribute="height" secondItem="M5L-FC-tSc" secondAttribute="height" id="djF-R5-4Aa"/>
+                <constraint firstItem="Ddp-AJ-APj" firstAttribute="leading" secondItem="Tx5-IR-TAw" secondAttribute="leading" id="gBp-T1-vQS"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+    </objects>
+</document>

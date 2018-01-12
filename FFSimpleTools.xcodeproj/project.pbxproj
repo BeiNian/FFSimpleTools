@@ -13,6 +13,11 @@
 		28B164102008889E0072AD2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28B1640F2008889E0072AD2D /* Assets.xcassets */; };
 		28B164132008889E0072AD2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28B164112008889E0072AD2D /* LaunchScreen.storyboard */; };
 		28B164162008889E0072AD2D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B164152008889E0072AD2D /* main.m */; };
+		28C59CC320089368000B4310 /* ViewControllerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C59CC120089368000B4310 /* ViewControllerCell.m */; };
+		28C59CC420089368000B4310 /* ViewControllerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28C59CC220089368000B4310 /* ViewControllerCell.xib */; };
+		28C59CC82008BF3E000B4310 /* FFKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C59CC62008BF3E000B4310 /* FFKeychain.m */; };
+		28C59CCF2008BF8B000B4310 /* FFKeychainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C59CCD2008BF8B000B4310 /* FFKeychainViewController.m */; };
+		28C59CD02008BF8B000B4310 /* FFKeychainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28C59CCE2008BF8B000B4310 /* FFKeychainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,14 @@
 		28B164122008889E0072AD2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28B164142008889E0072AD2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28B164152008889E0072AD2D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		28C59CC020089368000B4310 /* ViewControllerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllerCell.h; sourceTree = "<group>"; };
+		28C59CC120089368000B4310 /* ViewControllerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewControllerCell.m; sourceTree = "<group>"; };
+		28C59CC220089368000B4310 /* ViewControllerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewControllerCell.xib; sourceTree = "<group>"; };
+		28C59CC62008BF3E000B4310 /* FFKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFKeychain.m; sourceTree = "<group>"; };
+		28C59CC72008BF3E000B4310 /* FFKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFKeychain.h; sourceTree = "<group>"; };
+		28C59CCC2008BF8B000B4310 /* FFKeychainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFKeychainViewController.h; sourceTree = "<group>"; };
+		28C59CCD2008BF8B000B4310 /* FFKeychainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFKeychainViewController.m; sourceTree = "<group>"; };
+		28C59CCE2008BF8B000B4310 /* FFKeychainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FFKeychainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,13 +75,29 @@
 				28B164072008889E0072AD2D /* AppDelegate.m */,
 				28B164092008889E0072AD2D /* ViewController.h */,
 				28B1640A2008889E0072AD2D /* ViewController.m */,
+				28C59CC52008BF35000B4310 /* FFKeychain */,
 				28B1640C2008889E0072AD2D /* Main.storyboard */,
+				28C59CC020089368000B4310 /* ViewControllerCell.h */,
+				28C59CC120089368000B4310 /* ViewControllerCell.m */,
+				28C59CC220089368000B4310 /* ViewControllerCell.xib */,
 				28B1640F2008889E0072AD2D /* Assets.xcassets */,
 				28B164112008889E0072AD2D /* LaunchScreen.storyboard */,
 				28B164142008889E0072AD2D /* Info.plist */,
 				28B164152008889E0072AD2D /* main.m */,
 			);
 			path = FFSimpleTools;
+			sourceTree = "<group>";
+		};
+		28C59CC52008BF35000B4310 /* FFKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				28C59CC72008BF3E000B4310 /* FFKeychain.h */,
+				28C59CC62008BF3E000B4310 /* FFKeychain.m */,
+				28C59CCC2008BF8B000B4310 /* FFKeychainViewController.h */,
+				28C59CCD2008BF8B000B4310 /* FFKeychainViewController.m */,
+				28C59CCE2008BF8B000B4310 /* FFKeychainViewController.xib */,
+			);
+			path = FFKeychain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,8 +158,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28C59CD02008BF8B000B4310 /* FFKeychainViewController.xib in Resources */,
 				28B164132008889E0072AD2D /* LaunchScreen.storyboard in Resources */,
 				28B164102008889E0072AD2D /* Assets.xcassets in Resources */,
+				28C59CC420089368000B4310 /* ViewControllerCell.xib in Resources */,
 				28B1640E2008889E0072AD2D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,7 +175,10 @@
 			files = (
 				28B1640B2008889E0072AD2D /* ViewController.m in Sources */,
 				28B164162008889E0072AD2D /* main.m in Sources */,
+				28C59CCF2008BF8B000B4310 /* FFKeychainViewController.m in Sources */,
+				28C59CC320089368000B4310 /* ViewControllerCell.m in Sources */,
 				28B164082008889E0072AD2D /* AppDelegate.m in Sources */,
+				28C59CC82008BF3E000B4310 /* FFKeychain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,10 +315,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4LKCDLMAW5;
 				INFOPLIST_FILE = FFSimpleTools/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.code.FFSimpleTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -295,10 +330,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4LKCDLMAW5;
 				INFOPLIST_FILE = FFSimpleTools/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.code.FFSimpleTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
