@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ViewControllerCell.h"
+#import <objc/runtime.h>
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, nullable, strong) UITableView *tableView;
@@ -29,13 +30,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ViewControllerCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ViewControllerCell" forIndexPath:indexPath];
     
-    cell.contentLabel.text = self.dataSource[indexPath.row];
+    cell.contentLabel.text = self.dataSource[indexPath.row][@"titeText"];
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    UIViewController *viewController =  [[NSClassFromString(self.dataSource[indexPath.row][@"viewController"]) alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 #pragma mark - set & get
@@ -55,11 +57,16 @@
 - (NSArray *)dataSource {
     if (_dataSource == nil) {
         _dataSource = @[
-                        @"钥匙串的访问",
-                        @"钥匙串的访问",
-                        @"钥匙串的访问",
-                        @"钥匙串的访问",
-                        @"钥匙串的访问",
+                        @{@"titeText":@"钥匙串的访问",
+                          @"viewController":@"FFKeychainViewController"},
+                        @{@"titeText":@"Toast提示",
+                          @"viewController":@"CKToastViewController"},
+                        @{@"titeText":@"设备信息",
+                          @"viewController":@"FFDeviceViewController"},
+                        @{@"titeText":@"钥匙串的访问",
+                          @"viewController":@"FFKeychainViewController"},
+                        @{@"titeText":@"钥匙串的访问",
+                          @"viewController":@"FFKeychainViewController"},
                         ];
     }
     return _dataSource;

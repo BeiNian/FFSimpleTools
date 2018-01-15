@@ -18,6 +18,12 @@
 		28C59CC82008BF3E000B4310 /* FFKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C59CC62008BF3E000B4310 /* FFKeychain.m */; };
 		28C59CCF2008BF8B000B4310 /* FFKeychainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C59CCD2008BF8B000B4310 /* FFKeychainViewController.m */; };
 		28C59CD02008BF8B000B4310 /* FFKeychainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28C59CCE2008BF8B000B4310 /* FFKeychainViewController.xib */; };
+		28F58D36200C80AD00CF448B /* FFDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F58D34200C80AD00CF448B /* FFDeviceViewController.m */; };
+		28F58D37200C80AD00CF448B /* FFDeviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F58D35200C80AD00CF448B /* FFDeviceViewController.xib */; };
+		28F58D3D200C898B00CF448B /* CKCentreToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F58D3A200C898B00CF448B /* CKCentreToastView.m */; };
+		28F58D3E200C898B00CF448B /* CKToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F58D3C200C898B00CF448B /* CKToast.m */; };
+		28F58D42200C89B600CF448B /* CKToastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F58D40200C89B600CF448B /* CKToastViewController.m */; };
+		28F58D43200C89B600CF448B /* CKToastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F58D41200C89B600CF448B /* CKToastViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +45,16 @@
 		28C59CCC2008BF8B000B4310 /* FFKeychainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFKeychainViewController.h; sourceTree = "<group>"; };
 		28C59CCD2008BF8B000B4310 /* FFKeychainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFKeychainViewController.m; sourceTree = "<group>"; };
 		28C59CCE2008BF8B000B4310 /* FFKeychainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FFKeychainViewController.xib; sourceTree = "<group>"; };
+		28F58D33200C80AD00CF448B /* FFDeviceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFDeviceViewController.h; sourceTree = "<group>"; };
+		28F58D34200C80AD00CF448B /* FFDeviceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFDeviceViewController.m; sourceTree = "<group>"; };
+		28F58D35200C80AD00CF448B /* FFDeviceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FFDeviceViewController.xib; sourceTree = "<group>"; };
+		28F58D39200C898B00CF448B /* CKCentreToastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCentreToastView.h; sourceTree = "<group>"; };
+		28F58D3A200C898B00CF448B /* CKCentreToastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCentreToastView.m; sourceTree = "<group>"; };
+		28F58D3B200C898B00CF448B /* CKToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKToast.h; sourceTree = "<group>"; };
+		28F58D3C200C898B00CF448B /* CKToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKToast.m; sourceTree = "<group>"; };
+		28F58D3F200C89B600CF448B /* CKToastViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CKToastViewController.h; sourceTree = "<group>"; };
+		28F58D40200C89B600CF448B /* CKToastViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CKToastViewController.m; sourceTree = "<group>"; };
+		28F58D41200C89B600CF448B /* CKToastViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CKToastViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,11 +91,13 @@
 				28B164072008889E0072AD2D /* AppDelegate.m */,
 				28B164092008889E0072AD2D /* ViewController.h */,
 				28B1640A2008889E0072AD2D /* ViewController.m */,
-				28C59CC52008BF35000B4310 /* FFKeychain */,
 				28B1640C2008889E0072AD2D /* Main.storyboard */,
 				28C59CC020089368000B4310 /* ViewControllerCell.h */,
 				28C59CC120089368000B4310 /* ViewControllerCell.m */,
 				28C59CC220089368000B4310 /* ViewControllerCell.xib */,
+				28F58D38200C898B00CF448B /* CKToast */,
+				28F58D32200C808300CF448B /* UIDevice */,
+				28C59CC52008BF35000B4310 /* FFKeychain */,
 				28B1640F2008889E0072AD2D /* Assets.xcassets */,
 				28B164112008889E0072AD2D /* LaunchScreen.storyboard */,
 				28B164142008889E0072AD2D /* Info.plist */,
@@ -98,6 +116,30 @@
 				28C59CCE2008BF8B000B4310 /* FFKeychainViewController.xib */,
 			);
 			path = FFKeychain;
+			sourceTree = "<group>";
+		};
+		28F58D32200C808300CF448B /* UIDevice */ = {
+			isa = PBXGroup;
+			children = (
+				28F58D33200C80AD00CF448B /* FFDeviceViewController.h */,
+				28F58D34200C80AD00CF448B /* FFDeviceViewController.m */,
+				28F58D35200C80AD00CF448B /* FFDeviceViewController.xib */,
+			);
+			path = UIDevice;
+			sourceTree = "<group>";
+		};
+		28F58D38200C898B00CF448B /* CKToast */ = {
+			isa = PBXGroup;
+			children = (
+				28F58D39200C898B00CF448B /* CKCentreToastView.h */,
+				28F58D3A200C898B00CF448B /* CKCentreToastView.m */,
+				28F58D3B200C898B00CF448B /* CKToast.h */,
+				28F58D3C200C898B00CF448B /* CKToast.m */,
+				28F58D3F200C89B600CF448B /* CKToastViewController.h */,
+				28F58D40200C89B600CF448B /* CKToastViewController.m */,
+				28F58D41200C89B600CF448B /* CKToastViewController.xib */,
+			);
+			path = CKToast;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,7 +203,9 @@
 				28C59CD02008BF8B000B4310 /* FFKeychainViewController.xib in Resources */,
 				28B164132008889E0072AD2D /* LaunchScreen.storyboard in Resources */,
 				28B164102008889E0072AD2D /* Assets.xcassets in Resources */,
+				28F58D43200C89B600CF448B /* CKToastViewController.xib in Resources */,
 				28C59CC420089368000B4310 /* ViewControllerCell.xib in Resources */,
+				28F58D37200C80AD00CF448B /* FFDeviceViewController.xib in Resources */,
 				28B1640E2008889E0072AD2D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,9 +217,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28F58D42200C89B600CF448B /* CKToastViewController.m in Sources */,
 				28B1640B2008889E0072AD2D /* ViewController.m in Sources */,
 				28B164162008889E0072AD2D /* main.m in Sources */,
+				28F58D36200C80AD00CF448B /* FFDeviceViewController.m in Sources */,
+				28F58D3D200C898B00CF448B /* CKCentreToastView.m in Sources */,
 				28C59CCF2008BF8B000B4310 /* FFKeychainViewController.m in Sources */,
+				28F58D3E200C898B00CF448B /* CKToast.m in Sources */,
 				28C59CC320089368000B4310 /* ViewControllerCell.m in Sources */,
 				28B164082008889E0072AD2D /* AppDelegate.m in Sources */,
 				28C59CC82008BF3E000B4310 /* FFKeychain.m in Sources */,
