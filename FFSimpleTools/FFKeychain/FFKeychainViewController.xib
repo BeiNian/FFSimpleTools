@@ -20,54 +20,70 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5L-FC-tSc">
-                    <rect key="frame" x="112.5" y="120" width="150" height="45"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dri-XQ-aoa">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6m5-T3-klF">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="600"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxA-zd-tag">
+                                    <rect key="frame" x="112" y="100" width="150" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="150" id="31e-cz-jBG"/>
+                                        <constraint firstAttribute="height" constant="45" id="VkG-q6-OL4"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="下载" translatesAutoresizingMaskIntoConstraints="NO" id="HxO-ON-l5L">
+                                    <rect key="frame" x="0.0" y="243" width="374" height="220"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="220" id="XMv-Ue-r0A"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="600" id="5xu-cJ-ETU"/>
+                                <constraint firstItem="HxO-ON-l5L" firstAttribute="top" secondItem="pxA-zd-tag" secondAttribute="bottom" constant="98" id="92w-aP-nUc"/>
+                                <constraint firstItem="pxA-zd-tag" firstAttribute="centerX" secondItem="6m5-T3-klF" secondAttribute="centerX" id="ItZ-mb-EkU"/>
+                                <constraint firstItem="pxA-zd-tag" firstAttribute="top" secondItem="6m5-T3-klF" secondAttribute="top" constant="100" id="YbJ-CJ-22g"/>
+                                <constraint firstItem="HxO-ON-l5L" firstAttribute="leading" secondItem="6m5-T3-klF" secondAttribute="leading" id="d8s-zC-lhE"/>
+                                <constraint firstAttribute="trailing" secondItem="HxO-ON-l5L" secondAttribute="trailing" id="paH-JG-sJC"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rJH-Xn-87b">
+                            <rect key="frame" x="0.0" y="600" width="374" height="300"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="300" id="oam-FJ-aMq"/>
+                            </constraints>
+                        </view>
+                    </subviews>
                     <constraints>
-                        <constraint firstAttribute="height" constant="45" id="Fk1-9n-9pX"/>
-                        <constraint firstAttribute="width" constant="150" id="lNR-ao-nRz"/>
+                        <constraint firstItem="rJH-Xn-87b" firstAttribute="top" secondItem="6m5-T3-klF" secondAttribute="bottom" id="71c-T9-e4i"/>
+                        <constraint firstAttribute="bottom" secondItem="rJH-Xn-87b" secondAttribute="bottom" id="AOw-Qy-6bE"/>
+                        <constraint firstItem="6m5-T3-klF" firstAttribute="top" secondItem="dri-XQ-aoa" secondAttribute="top" id="HZq-MS-agX"/>
+                        <constraint firstAttribute="trailing" secondItem="rJH-Xn-87b" secondAttribute="trailing" id="K3l-bZ-0hh"/>
+                        <constraint firstItem="6m5-T3-klF" firstAttribute="leading" secondItem="dri-XQ-aoa" secondAttribute="leading" id="LMj-3Z-cWo"/>
+                        <constraint firstAttribute="trailing" secondItem="6m5-T3-klF" secondAttribute="trailing" id="Ndt-1O-Z64"/>
+                        <constraint firstItem="6m5-T3-klF" firstAttribute="centerX" secondItem="dri-XQ-aoa" secondAttribute="centerX" id="RcB-Uz-JYZ"/>
+                        <constraint firstItem="rJH-Xn-87b" firstAttribute="leading" secondItem="dri-XQ-aoa" secondAttribute="leading" id="cAd-OK-YdP"/>
                     </constraints>
-                    <state key="normal" title="添加新钥匙串"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tx5-IR-TAw">
-                    <rect key="frame" x="112.5" y="205" width="150" height="45"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="45" id="HWs-6D-sEg"/>
-                        <constraint firstAttribute="width" constant="150" id="gId-ED-1T5"/>
-                    </constraints>
-                    <state key="normal" title="更新钥匙串"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ddp-AJ-APj">
-                    <rect key="frame" x="112.5" y="290" width="150" height="45"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="45" id="Pqz-t7-Vsu"/>
-                        <constraint firstAttribute="width" constant="150" id="dgh-kp-1vy"/>
-                    </constraints>
-                    <state key="normal" title="更新钥匙串"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0b-dl-wiT">
-                    <rect key="frame" x="112" y="375" width="150" height="45"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="150" id="8G9-bV-p0j"/>
-                        <constraint firstAttribute="height" constant="45" id="fdi-bS-VLZ"/>
-                    </constraints>
-                    <state key="normal" title="更新钥匙串"/>
-                </button>
+                </scrollView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="M5L-FC-tSc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3Be-0L-F8t"/>
-                <constraint firstItem="Ddp-AJ-APj" firstAttribute="top" secondItem="Tx5-IR-TAw" secondAttribute="bottom" constant="40" id="70i-hb-BIc"/>
-                <constraint firstItem="M5L-FC-tSc" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="100" id="Gbh-25-DIl"/>
-                <constraint firstItem="t0b-dl-wiT" firstAttribute="top" secondItem="Ddp-AJ-APj" secondAttribute="bottom" constant="40" id="Hpa-OI-8sd"/>
-                <constraint firstItem="Tx5-IR-TAw" firstAttribute="leading" secondItem="M5L-FC-tSc" secondAttribute="leading" id="IGJ-zr-igV"/>
-                <constraint firstItem="Tx5-IR-TAw" firstAttribute="top" secondItem="M5L-FC-tSc" secondAttribute="bottom" constant="40" id="Qrh-N9-oeR"/>
-                <constraint firstItem="Tx5-IR-TAw" firstAttribute="width" secondItem="M5L-FC-tSc" secondAttribute="width" id="W6S-QH-Jn9"/>
-                <constraint firstItem="t0b-dl-wiT" firstAttribute="leading" secondItem="Ddp-AJ-APj" secondAttribute="leading" id="aVA-dE-lfh"/>
-                <constraint firstItem="Tx5-IR-TAw" firstAttribute="height" secondItem="M5L-FC-tSc" secondAttribute="height" id="djF-R5-4Aa"/>
-                <constraint firstItem="Ddp-AJ-APj" firstAttribute="leading" secondItem="Tx5-IR-TAw" secondAttribute="leading" id="gBp-T1-vQS"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="dri-XQ-aoa" secondAttribute="trailing" id="2zB-fj-cJg"/>
+                <constraint firstItem="dri-XQ-aoa" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="G4z-We-C9R"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="dri-XQ-aoa" secondAttribute="bottom" id="Ncm-Rc-wPF"/>
+                <constraint firstItem="dri-XQ-aoa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Tum-Lm-OBC"/>
+                <constraint firstItem="dri-XQ-aoa" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="vBI-yH-UuN"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="24.5" y="51.5"/>
+            <point key="canvasLocation" x="-44" y="9"/>
         </view>
     </objects>
+    <resources>
+        <image name="下载" width="330" height="220"/>
+    </resources>
 </document>

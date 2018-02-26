@@ -27,17 +27,16 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-    UIView *contentView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 150, 300)];
-    contentView.backgroundColor = [UIColor whiteColor];
-    UIButton *cancelButton = [UIButton new];
-    [cancelButton setTitle:@"取消" forState:UIControlStateNormal];
-    [cancelButton setBackgroundColor:[UIColor yellowColor]];
-    cancelButton.frame = CGRectMake(10, 30, 80, 50);
-    [contentView addSubview:cancelButton];
-    
-    CKToast *tost = [[CKToast alloc] initCentreToastWithView:contentView autoDismiss:YES duration:3.0];
-    
-    [tost show];
+//    UIView *contentView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 150, 300)];
+//    contentView.backgroundColor = [UIColor whiteColor];
+//    UIButton *cancelButton = [UIButton new];
+//    [cancelButton setTitle:@"取消" forState:UIControlStateNormal];
+//    [cancelButton setBackgroundColor:[UIColor yellowColor]];
+//    cancelButton.frame = CGRectMake(10, 30, 80, 50);
+//    [contentView addSubview:cancelButton];
+//
+//    CKToast *tost = [[CKToast alloc] initCentreToastWithView:contentView autoDismiss:YES duration:3.0];
+//    [tost show];
 }
 
 

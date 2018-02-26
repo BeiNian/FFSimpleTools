@@ -9,8 +9,11 @@
 #import "ViewController.h"
 #import "ViewControllerCell.h"
 #import <objc/runtime.h>
+#import "UIImage+Create.h"
 
-@interface ViewController () <UITableViewDelegate, UITableViewDataSource>
+#define COLOR_HEX(r, g, b, a) ([UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a])
+
+@interface ViewController () <UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate>
 @property (nonatomic, nullable, strong) UITableView *tableView;
 @property (nonatomic, nullable, strong) NSArray *dataSource;
 
@@ -21,12 +24,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.tableView];
-    
+//    self.navigationController.delegate = self;
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@""] forBarMetrics:UIBarMetricsDefault];
+}
+
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.dataSource.count;
 }
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ViewControllerCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ViewControllerCell" forIndexPath:indexPath];
     
@@ -38,6 +54,30 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UIViewController *viewController =  [[NSClassFromString(self.dataSource[indexPath.row][@"viewController"]) alloc] init];
     [self.navigationController pushViewController:viewController animated:YES];
+}
+
+#pragma mark - UINavigationControllerDelegate
+- (void) navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    // 如果进入的是当前视图控制器
+    if (viewController == self) {
+        //        // 背景设置为黑色
+        //        self.navigationController.navigationBar.tintColor = [UIColor clearColor];
+        //        // 透明度设置为0.3
+        //        self.navigationController.navigationBar.alpha = 0;
+        //        // 设置为半透明
+        //        self.navigationController.navigationBar.translucent = NO;
+//        [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+//        [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+        
+        
+    } else {
+//        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@""] forBarMetrics:UIBarMetricsDefault];
+        //        // 进入其他视图控制器
+        //        self.navigationController.navigationBar.alpha = 1;
+        //        // 背景颜色设置为系统默认颜色
+        //        self.navigationController.navigationBar.tintColor = nil;
+        //        self.navigationController.navigationBar.translucent = NO;
+    }
 }
 
 #pragma mark - set & get
@@ -63,10 +103,6 @@
                           @"viewController":@"CKToastViewController"},
                         @{@"titeText":@"设备信息",
                           @"viewController":@"FFDeviceViewController"},
-                        @{@"titeText":@"钥匙串的访问",
-                          @"viewController":@"FFKeychainViewController"},
-                        @{@"titeText":@"钥匙串的访问",
-                          @"viewController":@"FFKeychainViewController"},
                         ];
     }
     return _dataSource;
